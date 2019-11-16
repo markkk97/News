@@ -1,0 +1,29 @@
+# Jave related
+target/**
+*.jar
+*.war
+*.ear
+*.class
+src/application/Main.java
+
+# eclipse specific
+
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+
+*~.nib
+local.properties
+.classpath
+.settings/
+
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
