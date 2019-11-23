@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #FFFFFF;" styleClass="parent" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NewsReaderController">
+
+   <children>
+      <VBox prefHeight="800.0" prefWidth="300.0" styleClass="sidebar">
+         <children>
+            <Label prefHeight="65.0" prefWidth="300.0" style="-fx-background-color: #0095D3;" text="Eit News" textFill="#f8f8f8">
+               <font>
+                  <Font name="Arial Hebrew Scholar" size="22.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label prefHeight="65.0" prefWidth="300.0" text="Articles" textFill="#fcfcfc">
+               <font>
+                  <Font name="Arial Hebrew Scholar" size="22.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children></VBox>
+      <ListView fx:id="listArticle" onMouseClicked="#handleMouseClick" prefHeight="255.0" prefWidth="277.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="120.0" />
+      <VBox layoutX="305.0" layoutY="13.0" prefHeight="776.0" prefWidth="1094.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="articlecontainers">
+               <VBox.margin>
+                  <Insets bottom="40.0" left="40.0" right="40.0" top="70.0" />
+               </VBox.margin>
+               <top>
+                  <Label fx:id="articleSubTitle" prefHeight="24.0" prefWidth="1023.0" text="Label" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Arial Hebrew Scholar" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </top>
+               <bottom>
+                  <Label text="Label" BorderPane.alignment="CENTER" />
+               </bottom>
+               <left>
+                  <Label fx:id="articleTitle" prefHeight="51.0" prefWidth="1015.0" styleClass="labels" text="Label" wrapText="true" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Arial Hebrew Scholar Bold" size="38.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets top="-80.0" />
+                     </BorderPane.margin>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </left>
+            </BorderPane>
+         </children></VBox>
+   </children>
+</AnchorPane>

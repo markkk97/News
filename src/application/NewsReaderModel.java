@@ -161,7 +161,7 @@ class NewsReaderModel {
 		}
 	}
 
-	private void dataFromServer() {
+	public void dataFromServer() {
 		List<Article> articlesList;
 		try {
 			articlesList = connectionManager.getArticles();
