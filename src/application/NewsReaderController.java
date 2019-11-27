@@ -3,6 +3,7 @@
  */
 package application;
 
+import java.awt.TextArea;
 import java.io.File;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
@@ -28,6 +29,8 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
@@ -37,6 +40,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
@@ -72,9 +76,18 @@ public class NewsReaderController {
 	private Label articleSubTitle;
 	
 	@FXML
-	private Label articleBody;
+	private Label articleAbstract;
+	
+	@FXML
+	private ImageView articleimage;
+	
+	@FXML
+	private ComboBox setCategory;
 	
 	
+	
+	@FXML 
+	private Text articleText;
 	
 	private ObservableList<Article> items = FXCollections.observableArrayList();
 	//end try
@@ -97,8 +110,11 @@ public class NewsReaderController {
         assert prova != null : "fx:id=\"prova\" was not injected: check your FXML file 'home.fxml'.";
         assert listArticle != null : "fx:id=\"listArticle\" was not injected: check your FXML file 'home.fxml'.";
         
-       // System.out.println("user " + ConnectionManager.getIdUser());
-        //getData();
+        //set categories in choice box
+        System.out.println("category " + Categories.ALL.name());
+        setCategory.setItems(newsReaderModel.getCategories());
+        
+        
         
  
         
@@ -117,7 +133,7 @@ public class NewsReaderController {
 		
 		newsReaderModel.setDummyData(false);
 		newsReaderModel.retrieveData();
-		//filteredData = new FilteredList<>(newsReaderModel.getArticles(), s-> true);
+		//filteredData = new FilteredList<>(newsReaderModel.getArticles(), categor-> true);
 		listArticle.setItems(newsReaderModel.getArticles());
 		
 		
@@ -158,6 +174,8 @@ public class NewsReaderController {
 	    
 	    articleTitle.setText(listArticle.getSelectionModel().getSelectedItem().getTitle());
 	    articleSubTitle.setText(listArticle.getSelectionModel().getSelectedItem().getSubtitle());
+	    articleAbstract.setText(listArticle.getSelectionModel().getSelectedItem().getAbstractText());
+	    articleimage.setImage(listArticle.getSelectionModel().getSelectedItem().getImageData());
 	}
 
 	/**
