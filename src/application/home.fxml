@@ -45,7 +45,7 @@
          </children></VBox>
       <VBox layoutX="305.0" layoutY="13.0" prefHeight="776.0" prefWidth="1094.0">
          <children>
-            <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="articlecontainers">
+            <BorderPane minHeight="300.0" prefWidth="200.0" styleClass="articlecontainers">
                <VBox.margin>
                   <Insets bottom="40.0" left="40.0" right="40.0" top="70.0" />
                </VBox.margin>
@@ -53,39 +53,42 @@
                  
                </center>
                <top>
-                  <Label fx:id="articleTitle" prefWidth="1012.0" text="Label" wrapText="true" BorderPane.alignment="CENTER">
+                  <Label fx:id="articleTitle" prefWidth="1012.0" style="-fx-background-color: #0095D3; -fx-background-radius: 20;" text="Label" textAlignment="CENTER" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
-                        <Font size="24.0" />
+                        <Font name="System Bold" size="24.0" />
                      </font>
                      <BorderPane.margin>
-                        <Insets left="10.0" right="10.0" top="5.0" />
+                        <Insets left="10.0" right="10.0" top="10.0" />
                      </BorderPane.margin>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
                   </Label>
                </top>
                <right>
-                  <ImageView fx:id="articleimage" fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" styleClass="articleimage" BorderPane.alignment="CENTER">
+                  <ImageView fx:id="articleimage" fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-radius: 20;" styleClass="articleimage" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
-                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                      </BorderPane.margin>
                   </ImageView>
                </right>
                <bottom>
-                  <Label fx:id="articleAbstract" prefWidth="1030.0" text="Label" wrapText="true" BorderPane.alignment="CENTER">
+                  <Label fx:id="articleAbstract" prefWidth="1029.0" text="Label" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>
                      <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        <Insets bottom="20.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                      <BorderPane.margin>
-                        <Insets />
+                        <Insets bottom="20.0" />
                      </BorderPane.margin>
                   </Label>
                </bottom>
                <left>
                   <Label fx:id="articleSubTitle" prefWidth="680.0" text="Label" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
-                        <Font name="Arial Hebrew Scholar" size="18.0" />
+                        <Font name="Arial Hebrew Scholar Light" size="18.0" />
                      </font>
                      <BorderPane.margin>
                         <Insets left="10.0" right="10.0" top="-30.0" />
